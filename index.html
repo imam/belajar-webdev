@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Toko Buku Imam</title>
+</head>
+<body>
+	<div class="">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="#">Toko Bukuku</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Tentang Kami</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="">
+		<div class="jumbotron bg-primary text-light jumbotron-image">
+				<div class="jumbotron-text text-right">
+					<h1 class="display-4 font-weight-bold">Selamat Datang!</h1>
+					<p class="lead">Selamat datang di Toko Buku Imam</p>
+				</div>
+		</div>
+	</div>
+	<div class="container-fluid text-center">
+		<h1>Toko Buku Imam</h1>
+	</div>
+	<div class="container mt-5">
+		<div class="row" id="home-row">
+			<div class="col-4" v-for="book in books">
+				<div class="mx-4 card mt-3 ">
+					<img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{book.title}}</h5>
+						<p class="card-text">
+							{{book.description}} <br>
+							<span v-bind:class="['font-weight-bold', book.stock == 0 ? 'text-danger' : false]">
+									Stok: {{book.stock}}
+							<span>
+						</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script type="text/javascript">
+		var belajar = new Vue({
+			el: '#home-row',
+			data: {
+				books: [
+					{title: 'Matematika', description: 'Test Aja', stock: 14},
+					{title: 'Fisika', description: 'Test Aja' , stock:13},
+					{title: 'Kimia', description: 'Test Aja', stock:100},
+					{title: 'Geografi', description: 'Test Aja', stock: 0},
+					{title: 'TIK', description: 'Test Aja', stock:3},
+					{title: 'Sejarah', description: 'Test Aja', stock: 5},
+					{title: 'Biologi', description: 'Test Aja',stock: 0},
+					{title: 'Olahraga', description: 'Test Aja', stock: 10},
+				]
+			}
+		})
+	
+		</script>
+</body>
+</html>

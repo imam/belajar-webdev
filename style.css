@@ -1,0 +1,17 @@
+.jumbotron-image{
+	background-image: url('https://images.unsplash.com/photo-1596914057247-c675c86e38f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+	background-size: cover;
+	background-position-y: -285px;
+	height: 350px;
+}
+
+.jumbotron{
+	position: relative;
+}
+
+.jumbotron-text{
+	position: absolute;
+    bottom: 54px;
+    /* left: 30px; */
+    right: 30px;
+}
